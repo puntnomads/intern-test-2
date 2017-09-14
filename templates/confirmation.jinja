@@ -15,6 +15,22 @@
     <dd>{{ change_due }}</dd>
 
     <dt>Change Denominations</dt>
-    <dd><!-- TODO --></dd>
+    <dd><table class="table">
+    <thead>
+      <tr>
+        <th>Change</th>
+        <th>Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for denomination in denominations %}
+        <tr>
+          <td>{{ denomination['name'] }}</td>
+          <td>{{ denomination['count'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table></dd>
   </dl>
+  <a href="/orders">Order List</a>
 {% endblock %}
